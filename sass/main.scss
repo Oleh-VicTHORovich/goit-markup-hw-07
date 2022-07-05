@@ -1,4 +1,4 @@
-@import "./utils/var";
+@import "./utils/vars";
 @import "./utils/visually-hidden";
 
 @import "./base/reset";
@@ -9,7 +9,14 @@
 @import "./components/btn";
 
 @import "./section/header";
+@import "./section/hero";
+@import "./section/action";
+@import "./section/galary";
+@import "./section/colleagues";
+@import "./section/clients";
+@import "./section/products";
 @import "./section/footer";
+@import "./section/modal";
 
 
 
