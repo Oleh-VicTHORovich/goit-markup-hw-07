@@ -2,19 +2,16 @@
     padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(236, 236, 236, 1);
+    .container {
+        display: flex;
+    }
 }
 
-// .header-logo {
-//     font-family: 'Raleway', sans-serif;
-//     font-weight: 700;
-//     font-size: 26px;
-//     line-height: 1.19;
-//     letter-spacing: 0.03em;
-//     color: #000;
-//     margin-right: 93px;
-// }
+.nav__logo-style {
+    margin-right: 93px;
+}
 
-.header-link {
+.menu__link {
     font-family: inherit;
     font-style: normal;
     font-weight: 500;
@@ -23,34 +20,32 @@
     letter-spacing: 0.02em;
     color: inherit;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.header-list .header-link.current {
+.menu .menu__link.current {
     color: var(--accent-color);
 }
 
 .current {
     position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: end;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-color);
+        margin-top: 29px;
+    }
 }
 
-.current::after {
-    content: "";
-    position: absolute;
-    bottom: end;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-    margin-top: 29px;
-}
-
-.header-link:hover,
-.header-link:focus {
-    color: var(--accent-color);
-}
-
-.header-icon-link .break-email {
+.contact__link .contact__email {
     margin-left: 10px;
     font-family: inherit;
     font-style: normal;
@@ -60,8 +55,7 @@
     letter-spacing: 0.02em;
 }
 
-
-.header-icon-link .break-tel {
+.contact__link .contact__tel {
     margin-left: 10px;
     font-family: inherit;
     font-style: normal;
@@ -71,53 +65,42 @@
     letter-spacing: 0.02em;
 }
 
-.header-tel:hover,
-.header-tel:focus {
-    color: var(--accent-color);
-}
-
-.header-list {
+.menu {
     display: flex;
     align-items: center;
 }
 
-.header-lowlist {
+.contact {
     display: flex;
     align-items: center;
     margin-left: auto;
 }
 
-
-.header-nav {
+.nav {
     display: flex;
 }
 
-.header .container {
-    display: flex;
-}
-
-.header-item:not(:last-child) {
+.menu__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.header-lowlist-contact:not(:first-child) {
+.contact__item:not(:first-child) {
     margin-left: 30px;
 }
 
-.header-icon-link {
+.contact__link {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #757575;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.header-icon-link:hover,
-.header-icon-link:focus {
-    color: var(--accent-color);
-}
-
-.header-contakt-icon {
+.contact__icon {
     fill: currentColor;
 }
 
